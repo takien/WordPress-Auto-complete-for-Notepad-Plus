@@ -38,6 +38,11 @@ It's mixed with and based on PHP AutoComplete by Geoffray Warnants - http://www.
 				<Param name="string str"/>
 			</Overload>
 		</KeyWord>
+		<KeyWord name="addslashes_gpc" func="yes">
+			<Overload retVal="string" descr="Adds slashes to escape strings.">
+				<Param name="string gpc"/>
+			</Overload>
+		</KeyWord>
 		<KeyWord name="add_action" func="yes">
 			<Overload retVal="void" descr="Hooks a function on to a specific action.">
 				<Param name="string tag"/>
@@ -84,8 +89,14 @@ It's mixed with and based on PHP AutoComplete by Geoffray Warnants - http://www.
 				<Param name="[bool unique=false]"/>
 			</Overload>
 		</KeyWord>
+		<KeyWord name="antispambot" func="yes">
+			<Overload retVal="string" descr="Converts email addresses characters to HTML entities to block spam bots.">
+				<Param name="string email_address"/>
+				<Param name="[int mailto=0]"/>
+			</Overload>
+		</KeyWord>
 		<KeyWord name="apache_child_terminate" func="yes">
-			<Overload retVal="bool">
+			<Overload retVal="bool" descr="Converts email addresses characters to HTML entities to block spam bots.">
 				<Param name="void"/>
 			</Overload>
 		</KeyWord>
@@ -544,6 +555,17 @@ It's mixed with and based on PHP AutoComplete by Geoffray Warnants - http://www.
 			<Overload retVal="bool" descr="Whether author of supplied post has capability or role.">
 				<Param name="int|object post"/>
 				<Param name="string capability"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="backslashit" func="yes">
+			<Overload retVal="string" descr="Adds backslashes before letters and before a number at the start of a string.">
+				<Param name="string string"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="balanceTags" func="yes">
+			<Overload retVal="string" descr="Will only balance the tags if forced to and the option is set to balance tags.">
+				<Param name="string text"/>
+				<Param name="[bool force=false]"/>
 			</Overload>
 		</KeyWord>
 		<KeyWord name="base64_decode" func="yes">
@@ -1101,6 +1123,11 @@ It's mixed with and based on PHP AutoComplete by Geoffray Warnants - http://www.
 			<Overload retVal="array">
 				<Param name="mixed class"/>
 				<Param name="[bool autoload=true]"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="clean_pre" func="yes">
+			<Overload retVal="string" descr="Accepts matches array from preg_replace_callback in wpautop() or a string.">
+				<Param name="array|string matches"/>
 			</Overload>
 		</KeyWord>
 		<KeyWord name="clearstatcache" func="yes">
@@ -2156,6 +2183,33 @@ It's mixed with and based on PHP AutoComplete by Geoffray Warnants - http://www.
 				<Param name="string command"/>
 			</Overload>
 		</KeyWord>
+		<KeyWord name="esc_html" func="yes">
+			<Overload retVal="string" descr="Escaping for HTML blocks.">
+				<Param name="string text"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="esc_js" func="yes">
+			<Overload retVal="string" descr="Escape single quotes, htmlspecialchar ' &lt; &gt; &, and fix line endings.">
+				<Param name="string text"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="esc_sql" func="yes">
+			<Overload retVal="string" descr="Escapes data for use in a MySQL query">
+				<Param name="string sql"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="esc_textarea" func="yes">
+			<Overload retVal="string" descr="Escaping for textarea values.">
+				<Param name="string text"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="esc_url" func="yes">
+			<Overload retVal="string" descr="Checks and cleans a URL.">
+				<Param name="string url"/>
+				<Param name="[array protocols=null"/>
+				<Param name="[string _context=display]]"/>
+			</Overload>
+		</KeyWord>		
 		<KeyWord name="eval" func="yes">
 			<Overload retVal="mixed">
 				<Param name="string code_str"/>
